@@ -3,9 +3,9 @@
     <div class="form-container">
       <h1>Register</h1>
 
-      <Form @submit.prevent="register">
-        <Notification v-if="notification" :message="message" />
+      <Notification v-if="notification" :message="message" />
 
+      <Form @submit.prevent="register">
         <div class="input-field">
           <label for="name">Name</label>
           <input
