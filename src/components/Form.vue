@@ -34,6 +34,11 @@ form >>> .input {
   width: 100%;
 }
 
+form >>> textarea {
+  min-height: 10rem;
+  resize: vertical;
+}
+
 @media only screen and (min-width: 768px) {
   form {
     margin: 3rem auto;
