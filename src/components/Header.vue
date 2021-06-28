@@ -31,25 +31,29 @@ export default {
     logout() {
       localStorage.removeItem('token');
       this.$root.updateLoggedIn();
-      this.$router.push('/');
+      this.$router.push('/login');
     },
   },
 };
 </script>
 
-<style>
+<style scoped>
+.container {
+  padding: 0.5rem 1rem;
+}
+
+header {
+  text-align: center;
+}
+
 #logo {
   height: 8rem;
   margin-top: -1rem;
 }
 
-header {
-  text-align: center;
-  padding: 0.5rem 1rem;
-}
-
 a {
   color: #222;
+  display: block;
   margin-bottom: 0.5rem;
   text-decoration: none;
   text-transform: uppercase;
@@ -59,12 +63,21 @@ a {
   text-decoration: underline;
 }
 
+#login-register {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 @media only screen and (min-width: 768px) {
+  .container {
+    padding: 0.5rem 2rem;
+  }
+
   header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.5rem 2rem;
   }
 
   nav {
@@ -99,7 +112,12 @@ a {
     right: -1rem;
   }
 
+  .link.router-link-exact-active {
+    color: rgb(255, 185, 2);
+  }
+
   #login-register {
+    flex-direction: row;
     margin-left: 2rem;
   }
 
