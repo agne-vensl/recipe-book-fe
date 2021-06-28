@@ -1,0 +1,42 @@
+<template>
+  <form>
+    <slot />
+  </form>
+</template>
+
+<script>
+export default {
+  name: 'Form',
+};
+</script>
+
+<style scoped>
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+form >>> label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+form >>> .input-field {
+  margin-bottom: 2rem;
+}
+
+form >>> .input {
+  border: 1px solid #ececec;
+  border-radius: 5px;
+  outline-color: rgb(95, 95, 95);
+  padding: 0.8rem 1rem;
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  form {
+    margin: 3rem auto;
+  }
+}
+</style>
