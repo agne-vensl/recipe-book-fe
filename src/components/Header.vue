@@ -88,7 +88,7 @@ a {
     margin-right: 2rem;
   }
 
-  .link.after::after {
+  .link.after:not(:last-of-type)::after {
     background: #222;
     content: '';
     display: inline-block;
