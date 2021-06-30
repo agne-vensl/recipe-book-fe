@@ -1,55 +1,57 @@
 <template>
-  <div class="form-container">
-    <h1>Add Recipe</h1>
+  <div class="container">
+    <div class="form-container">
+      <h1>Add Recipe</h1>
 
-    <Notification v-if="notification" :message="message" />
+      <Notification v-if="notification" :message="message" />
 
-    <Form @submit.prevent="addRecipe">
-      <div class="input-field">
-        <label for="image">Image</label>
-        <input
-          class="input"
-          type="url"
-          name="image"
-          id="image"
-          placeholder="http://image.png"
-          required
-          v-model="image"
-        />
-      </div>
+      <Form @submit.prevent="addRecipe">
+        <div class="input-field">
+          <label for="image">Image</label>
+          <input
+            class="input"
+            type="url"
+            name="image"
+            id="image"
+            placeholder="http://image.png"
+            required
+            v-model="image"
+          />
+        </div>
 
-      <div class="input-field">
-        <label for="title">Title</label>
-        <input
-          class="input"
-          type="text"
-          name="title"
-          id="title"
-          placeholder="Pasta"
-          required
-          v-model="title"
-        />
-      </div>
+        <div class="input-field">
+          <label for="title">Title</label>
+          <input
+            class="input"
+            type="text"
+            name="title"
+            id="title"
+            placeholder="Pasta"
+            required
+            v-model="title"
+          />
+        </div>
 
-      <div class="input-field">
-        <label for="description">Description</label>
-        <textarea
-          id="description"
-          class="input"
-          cols="30"
-          rows="10"
-          placeholder="Description..."
-          required
-          v-model="description"
-        ></textarea>
-      </div>
+        <div class="input-field">
+          <label for="description">Description</label>
+          <textarea
+            id="description"
+            class="input"
+            cols="30"
+            rows="10"
+            placeholder="Description..."
+            required
+            v-model="description"
+          ></textarea>
+        </div>
 
-      <div class="align-right">
-        <Button :loading="buttonLoading" type="submit" classes="button primary">
-          Submit
-        </Button>
-      </div>
-    </Form>
+        <div class="align-right">
+          <Button :loading="buttonLoading" type="submit" classes="button primary">
+            Submit
+          </Button>
+        </div>
+      </Form>
+    </div>
   </div>
 </template>
 
