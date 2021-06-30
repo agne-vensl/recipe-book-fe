@@ -62,7 +62,6 @@ export default {
   },
   methods: {
     login() {
-      console.log('got here');
       this.buttonLoading = true;
 
       fetch(`${process.env.VUE_APP_BASE_URL}/auth/login`, {
