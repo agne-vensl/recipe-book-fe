@@ -63,6 +63,10 @@ a {
   text-decoration: underline;
 }
 
+.link.router-link-exact-active {
+  color: rgb(255, 185, 2);
+}
+
 #login-register {
   display: flex;
   flex-direction: column;
@@ -110,10 +114,6 @@ a {
     position: absolute;
     top: -0.45rem;
     right: -1rem;
-  }
-
-  .link.router-link-exact-active {
-    color: rgb(255, 185, 2);
   }
 
   #login-register {
