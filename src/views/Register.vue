@@ -122,7 +122,7 @@ export default {
           this.password = '';
         })
         .finally(() => {
-          this.loading = false;
+          this.buttonLoading = false;
         });
     },
   },
